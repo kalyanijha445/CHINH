@@ -22,14 +22,22 @@ import google.generativeai as genai
 from deepface import DeepFace
 from scipy.spatial.distance import cosine
 
+
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-super-secret-key-for-sessions'
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 app.config['DATABASE'] = 'database.db'
 app.config['TEMP_FOLDER'] = 'static/uploads/temp'
+
+# ✅ Add this line to fix 413 Request Entity Too Large
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16 MB limit (you can increase if needed)
+
+# Email and API keys
 GEMINI_API_KEY = "AIzaSyDwi2skn6WWEkAwZuNBTMuY2b_bTIwmGOw"
 GMAIL_USER = "chinhodisha@gmail.com"
 GMAIL_PASSWORD = "bqou fkyy wfwu fkjo"
+
+
 
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-2.0-flash')
