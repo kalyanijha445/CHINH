@@ -4,6 +4,6 @@ numpy
 Pillow
 fpdf
 deepface
-tensorflow==2.15.0
+tensorflow-cpu
 tf-keras
 google-generativeai
