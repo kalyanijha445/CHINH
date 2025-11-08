@@ -7,3 +7,4 @@ deepface
 tensorflow-cpu
 tf-keras
 google-generativeai
+scipy
