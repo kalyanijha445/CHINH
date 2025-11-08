@@ -1,0 +1,8 @@
+Flask
+gunicorn
+numpy
+Pillow
+fpdf
+deepface
+tensorflow
+tf-keras
