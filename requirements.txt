@@ -1,0 +1,10 @@
+Flask
+gunicorn
+numpy
+Pillow
+fpdf
+deepface
+tensorflow-cpu
+tf-keras
+google-generativeai
+scipy
